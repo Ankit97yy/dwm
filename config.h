@@ -50,6 +50,9 @@ static const char *upvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "+5%", N
 static const char *downvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL};
 static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL};
 
+/* Brightness control */
+static const char *upbright[] = {"brightness.sh","up", NULL};
+static const char *downbright[] = {"brightness.sh","down", NULL};
 
 /* key definitions */
 #define MODKEY Mod4Mask
@@ -106,6 +109,8 @@ static Key keys[] = {
 	{ 0,							XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
 	{ 0,							XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ 0,							XF86XK_AudioMute, spawn, {.v = mutevol } },
+	{ 0,							XF86XK_MonBrightnessUp, spawn, {.v = upbright } },
+	{ 0,							XF86XK_MonBrightnessDown, spawn, {.v = downbright } },
 };
 
 /* button definitions */
