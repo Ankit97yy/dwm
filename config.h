@@ -6,8 +6,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=11" };
+static const char dmenufont[]       = "monospace:size=11";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -54,6 +54,9 @@ static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle"
 static const char *upbright[] = {"brightness.sh","up", NULL};
 static const char *downbright[] = {"brightness.sh","down", NULL};
 
+/* Screenshot control */
+static const char *saveshot[] = {"screenshot.sh",NULL};
+
 /* key definitions */
 #define MODKEY Mod4Mask
 #define MODKEYY Mod1Mask
@@ -69,7 +72,7 @@ static const char *downbright[] = {"brightness.sh","down", NULL};
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -111,6 +114,7 @@ static Key keys[] = {
 	{ 0,							XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,							XF86XK_MonBrightnessUp, spawn, {.v = upbright } },
 	{ 0,							XF86XK_MonBrightnessDown, spawn, {.v = downbright } },
+	{ MODKEY,						XK_Print,	spawn,				{.v = saveshot } },
 };
 
 /* button definitions */
