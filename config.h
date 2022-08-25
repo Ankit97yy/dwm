@@ -116,6 +116,7 @@ static Key keys[] = {
 	{ 0,							XF86XK_MonBrightnessUp, spawn, {.v = upbright } },
 	{ 0,							XF86XK_MonBrightnessDown, spawn, {.v = downbright } },
 	{ MODKEY,						XK_Print,	spawn,				{.v = saveshot } },
+	{ MODKEY|ControlMask|ShiftMask, XK_q, quit, {1} },
 };
 
 /* button definitions */
