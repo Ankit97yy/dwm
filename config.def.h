@@ -78,6 +78,7 @@ static const char *rofirun[] = { "rofi", "-show","run", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = rofirun } },
+	{ MODKEY,                       XK_o,      spawn,          SHCMD("~/shortcuts/file_opener.sh") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEYY,                      XK_Tab,    focusstack,     {.i = +1 } },
