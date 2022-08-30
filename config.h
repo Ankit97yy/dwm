@@ -85,6 +85,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = rofirun } },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("~/shortcuts/file_opener.sh") },
 	{ ALTKEY,                       XK_Return, spawn,          SHCMD("~/shortcuts/scratchpad.sh") },
+	{ ALTKEY,                       XK_l,      spawn,		   SHCMD("slock") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ ALTKEY,                       XK_Tab,    focusstack,     {.i = +1 } },
