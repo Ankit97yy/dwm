@@ -84,6 +84,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = rofirun } },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("~/shortcuts/file_opener.sh") },
+	{ MODKEY,                       XK_c,      spawn,          SHCMD("rofi -show calc -modi calc -no-show-match -no-sort") },
 	{ ALTKEY,                       XK_Return, spawn,          SHCMD("~/shortcuts/scratchpad.sh") },
 	{ ALTKEY,                       XK_l,      spawn,		   SHCMD("slock") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
